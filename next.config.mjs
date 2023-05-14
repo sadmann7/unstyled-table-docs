@@ -21,6 +21,11 @@ const nextConfig = {
       permanent: true,
     },
     {
+      source: "/docs/getting-started",
+      destination: "/docs/introduction",
+      permanent: true,
+    },
+    {
       source: "/docs/renderers",
       destination: "/docs/renderers/header",
       permanent: true,

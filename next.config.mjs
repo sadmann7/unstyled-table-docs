@@ -1,5 +1,4 @@
 import withMDX from "@next/mdx"
-
 import rehypePrettyCode from "rehype-pretty-code"
 import { getHighlighter } from "shiki"
 
@@ -36,7 +35,6 @@ const nextConfig = {
       permanent: true,
     },
   ],
-
   experimental: {
     mdxRs: true,
   },

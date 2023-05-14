@@ -30,17 +30,14 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     Callout,
     h1: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
       <h1
-        className={cn(
-          "mt-2 scroll-m-20 font-sans text-4xl font-bold",
-          className
-        )}
+        className={cn("mt-2 scroll-m-20 text-4xl font-bold", className)}
         {...props}
       />
     ),
     h2: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
       <h2
         className={cn(
-          "mt-12 scroll-m-20 border-b pb-2 font-sans text-2xl font-semibold tracking-tight first:mt-0",
+          "mt-12 scroll-m-20 border-b pb-2 text-2xl font-semibold tracking-tight first:mt-0",
           className
         )}
         {...props}
@@ -49,7 +46,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     h3: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
       <h3
         className={cn(
-          "mt-8 scroll-m-20 font-sans text-xl font-semibold tracking-tight",
+          "mt-8 scroll-m-20  text-xl font-semibold tracking-tight",
           className
         )}
         {...props}
@@ -58,7 +55,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     h4: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
       <h4
         className={cn(
-          "mt-8 scroll-m-20 font-sans text-lg font-semibold tracking-tight",
+          "mt-8 scroll-m-20  text-lg font-semibold tracking-tight",
           className
         )}
         {...props}
@@ -164,6 +161,12 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
           "border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right",
           className
         )}
+        {...props}
+      />
+    ),
+    code: (props) => (
+      <code
+        className="relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold text-muted-foreground"
         {...props}
       />
     ),

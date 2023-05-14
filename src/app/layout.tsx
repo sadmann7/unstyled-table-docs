@@ -2,7 +2,7 @@ import "@/styles/globals.css"
 import type { Metadata } from "next"
 
 import { siteConfig } from "@/config/site"
-import { fontSans } from "@/lib/fonts"
+import { fontMono, fontSans } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
 import { Toaster } from "@/components/ui/toaster"
 import { SiteFooter } from "@/components/layouts/site-footer"
@@ -23,7 +23,6 @@ export const metadata: Metadata = {
     "React Table",
     "Unstyled Table",
     "Headless Table",
-    "Tailwind CSS",
   ],
   authors: [
     {
@@ -69,18 +68,19 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <>
-      <html lang="en" suppressHydrationWarning>
+      <html lang="en" suppressHydrationWarning className="bg-background">
         <head />
         <body
           className={cn(
-            "min-h-screen bg-background font-sans antialiased",
-            fontSans.variable
+            "min-h-screen font-sans antialiased",
+            fontSans.variable,
+            fontMono.variable
           )}
         >
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             <div className="relative flex min-h-screen flex-col">
               <SiteHeader />
-              <main className="flex-1">{children}</main>
+              <div className="flex-1">{children}</div>
               <SiteFooter />
             </div>
             <TailwindIndicator />

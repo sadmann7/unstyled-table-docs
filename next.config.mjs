@@ -1,4 +1,5 @@
-import withMdx from "@next/mdx"
+import withMDX from "@next/mdx"
+
 import rehypePrettyCode from "rehype-pretty-code"
 import { getHighlighter } from "shiki"
 
@@ -16,10 +17,21 @@ const nextConfig = {
   redirects: async () => [
     {
       source: "/docs",
-      destination: "/docs/getting-started",
+      destination: "/docs/introduction",
+      permanent: true,
+    },
+    {
+      source: "/docs/renderers",
+      destination: "/docs/renderers/header",
+      permanent: true,
+    },
+    {
+      source: "/docs/examples",
+      destination: "/docs/examples/basic",
       permanent: true,
     },
   ],
+
   experimental: {
     mdxRs: true,
   },
@@ -29,7 +41,7 @@ const nextConfig = {
  * @link https://github.com/t3-oss/t3-env/blob/main/docs/next.config.mjs
  */
 
-export default withMdx({
+export default withMDX({
   options: {
     rehypePlugins: [
       [

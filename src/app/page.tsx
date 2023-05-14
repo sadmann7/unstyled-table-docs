@@ -14,7 +14,7 @@ export default function IndexPage() {
           An unstyled react table component built on top of
           @tanstack/react-table v8
         </p>
-        <Link href="/docs">
+        <Link href="/docs/introduction">
           <div
             className={cn(
               buttonVariants({

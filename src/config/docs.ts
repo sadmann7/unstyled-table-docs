@@ -9,19 +9,19 @@ export const docsConfig: DocsConfig = {
   mainNav: [
     {
       title: "Docs",
-      href: "/docs",
+      href: "/docs/introduction",
     },
     {
       title: "Renderers",
-      href: "/docs/renderers",
+      href: "/docs/renderers/header",
     },
     {
       title: "Examples",
-      href: "/docs/examples",
+      href: "/docs/examples/basic",
     },
     {
       title: "Github",
-      href: "https://github.com/Otaku-OSS/unstyled-table/tree/main/packages/unstyled-table",
+      href: "https://github.com/otaku-oss/unstyled-table",
       external: true,
     },
   ],

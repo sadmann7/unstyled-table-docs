@@ -18,15 +18,7 @@ import {
 } from "@/components/ui/command"
 import { Icons } from "@/components/icons"
 
-interface CommandMenuProps {
-  placeholder?: string
-  empty?: string
-}
-
-export function CommandMenu({
-  placeholder = "Search...",
-  empty = "No item found.",
-}: CommandMenuProps) {
+export function Combobox() {
   const router = useRouter()
   const [isOpen, setIsOpen] = React.useState(false)
   const { setTheme } = useTheme()
@@ -62,9 +54,9 @@ export function CommandMenu({
         </kbd>
       </Button>
       <CommandDialogFixed open={isOpen} onOpenChange={setIsOpen}>
-        <CommandInput placeholder={placeholder} />
+        <CommandInput placeholder="Search..." />
         <CommandList>
-          <CommandEmpty>{empty}</CommandEmpty>
+          <CommandEmpty>No item found.</CommandEmpty>
           <CommandGroup heading="Menu">
             {docsConfig.mainNav
               .filter((navItem) => !navItem.external && !navItem.disabled)

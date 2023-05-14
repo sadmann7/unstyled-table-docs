@@ -4,7 +4,7 @@ import { docsConfig } from "@/config/docs"
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
-import { CommandMenu } from "@/components/command-menu"
+import { Combobox } from "@/components/combobox"
 import { Icons } from "@/components/icons"
 import { MainNav } from "@/components/layouts/main-nav"
 import { MobileNav } from "@/components/layouts/mobile-nav"
@@ -21,7 +21,7 @@ export function SiteHeader() {
         />
         <div className="flex flex-1 items-center justify-end space-x-4">
           <nav className="flex items-center space-x-1">
-            <CommandMenu />
+            <Combobox />
             <Link
               href={siteConfig.links.github}
               target="_blank"

@@ -97,23 +97,6 @@
 }
 
 @layer components {
-  pre > code {
-    counter-reset: line;
-    padding: unset !important;
-  }
-
-  pre > code > .line::before {
-    counter-increment: line;
-    content: counter(line);
-
-    /* Other styling */
-    display: inline-block;
-    width: 1rem;
-    margin-right: 1rem;
-    text-align: right;
-    color: var(--muted-foreground);
-  }
-
   [data-rehype-pretty-code-fragment] {
     @apply relative;
   }

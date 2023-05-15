@@ -4,6 +4,7 @@ import { allDocs } from "contentlayer/generated"
 
 import { cn } from "@/lib/utils"
 import { Separator } from "@/components/ui/separator"
+import { DocsPager } from "@/components/docs-pager"
 import { Mdx } from "@/components/mdx-components"
 
 interface DocPageProps {
@@ -66,8 +67,10 @@ export default async function DocPage({ params }: DocPageProps) {
             <p className="text-lg text-muted-foreground">{doc.description}</p>
           )}
         </div>
+        <Separator className="my-4 md:my-6" />
         <Mdx code={doc.body.code} />
         <Separator className="my-4 md:my-6" />
+        <DocsPager doc={doc} />
       </div>
     </main>
   )

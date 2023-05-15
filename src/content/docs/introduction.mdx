@@ -3,68 +3,28 @@ title: Introduction
 description: Unstyled Table is a completely unstyled, fully headless table building library for React.
 ---
 
-TanStack Table is a **Headless UI** library for building powerful tables & datagrids for TS/JS, React, Vue, Solid, and Svelte.
+## Why another table library?
 
-## What is "headless" UI?
+There are a lot of table libraries out there, so why did we build another one? Well, we wanted to build a table library that was: **unstyled**, **headless**, **lightweight**, **accessible**, **and** **easy-to-use**.
 
-**Headless UI** is a term for libraries and utilities that provide the logic, state, processing and API for UI elements and interactions, but **do not provide markup, styles, or pre-built implementations**. Scratching your head yet? 😉 Headless UI has a few main goals:
+[**TanStack Table**](https://tanstack.com/table/v8) already does most of them. But it is a bit difficult to setup. A core understanding of the apis are required to implement a proper client side table or a server side table.
 
-The hardest parts of building complex UIs usually revolve around state, events, side-effects, data computation/management. By removing these concerns from the markup, styles and implementation details, our logic and components can be more modular and reusable.
+So we made our own table library on top of the tanstack table to provide easy to implement table component. We call it **Unstyled Table**, as it is completely unstyled and headless.
 
-Building UI is a very branded and custom experience, even if that means choosing a design system or adhering to a design spec. To support this custom experience, component-based UI libraries need to support a massive (and seemingly endless) API surface around markup and style customization. Headless UI libraries decouple your logic from your UI
+## Why not a component-based libaray?
 
-When you use a headless UI library, the complex task of **data-processing, state-management, and business logic** are handled for you, leaving you worry about higher-cardinality decisions that differ across implementations and use cases.
+Component-based libraries are great, but they are not always the right choice. Component-based libraries are typically larger, more opinionated, and less flexible. They also tend to be more difficult to customize and integrate with existing UIs.
 
-> Want to dive deeper? [Read more about Headless UI](https://www.merrickchristensen.com/articles/headless-user-interface-components/).
+Headless libraries are smaller, more flexible, and more portable. They also tend to be easier to customize and integrate with existing UIs. They are also not tied to a specific styling solution. This means that you can customize them with any styling solution, and components.
 
-## Component-based libraries vs Headless libraries
+Learn more about headless interfaces in react [here](https://blog.logrocket.com/the-complete-guide-to-building-headless-interface-components-in-react/).
 
-In the ecosystem of table/datagrid libraries, there are two main categories:
+## Why it is built on top of TanStack Table?
 
-- Component-based table libraries
-- Headless table libraries
+TanStack Table is a great library. It is fast, flexible, and easy to use. It is also well maintained and has a large community. We wanted to build on top of it because it is a great foundation to build on top of.
 
-### Which kind of table library should I use?
+It is also a great way to contribute back to the open-source community from which we have benefited so much.
 
-Each approach has subtle tradeoffs. Understanding these subtleties will help you make the right decision for your application and team.
+## Why it is unstyled?
 
-### Component-based Table Libraries
-
-Component-based table libraries will typically supply you with a feature-rich drop-in solution and ready-to-use components/markup complete with styles/theming. [AG Grid](https://ag-grid.com/react-data-grid/?utm_source=reacttable&utm_campaign=githubreacttable) is a great example of this type of table library.
-
-**Pros:**
-
-- Ship with ready-to-use markup/styles
-- Little setup required
-- Turn-key experience
-
-**Cons:**
-
-- Less control over markup
-- Custom styles are typically theme-based
-- Larger bundle-sizes
-- Highly coupled to framework adapters and platforms
-
-**If you want a ready-to-use table and design/bundle-size are not hard requirements**, then you should consider using a component-based table library.
-
-There are a lot of component-based table libraries out there, but we believe [AG Grid](https://ag-grid.com/react-data-grid/?utm_source=reacttable&utm_campaign=githubreacttable) is the gold standard and is by far our favorite grid-sibling (don't tell the others 🤫).
-
-### Headless Table Libraries
-
-Headless table libraries will typically supply you with functions, state, utilities and event listeners to build your own table markup or attach to existing table markups.
-
-**Pros:**
-
-- Full control over markup and styles
-- Supports all styling patterns (CSS, CSS-in-JS, UI libraries, etc)
-- Smaller bundle-sizes
-- Portable. Run anywhere JS runs!
-
-**Cons:**
-
-- More setup required
-- No markup, styles or themes provided
-
-**If you want a lighter-weight table or full control over the design**, then you should consider using a headless table library.
-
-There are very few headless table libraries out there and obviously, **TanStack Table** is our favorite!
+Unstyled Table is unstyled because we believe that styling should be done by the developer. We also believe that styling should be done in a way that is easy to customize and integrate with existing UIs.

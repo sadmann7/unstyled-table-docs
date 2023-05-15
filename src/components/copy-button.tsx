@@ -21,7 +21,7 @@ export function CopyButton({ text, ...props }: CopyButtonProps) {
         if (typeof window === "undefined") return
         setIsCopied(true)
         void window.navigator.clipboard.writeText(text)
-        setTimeout(() => setIsCopied(false), 3000)
+        setTimeout(() => setIsCopied(false), 2000)
       }}
       {...props}
     >

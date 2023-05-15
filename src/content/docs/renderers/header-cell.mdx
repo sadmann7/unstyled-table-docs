@@ -1,6 +1,6 @@
 ---
-title: Header Renderer
-description: This component renders the headers of the table.
+title: Header Cell
+description: This component renders the cells of the table.
 ---
 
 ## Type definitions
@@ -17,6 +17,10 @@ export type HeaderComponent<TData> = FC<{
 ## Usage
 
 ```tsx
+import type { ComponentProps } from "react"
+
+import type { HeaderComponent } from "../../customtypes"
+
 const HeaderRenderer = <TData extends any>({
   children,
   renderer: Renderer,

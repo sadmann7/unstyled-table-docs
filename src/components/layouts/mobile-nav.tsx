@@ -71,7 +71,7 @@ export function MobileNav({ mainNavItems, sidebarNavItems }: MobileNavProps) {
                     <React.Fragment key={item.title}>
                       {item.href ? (
                         <Link
-                          href={item.title}
+                          href={item.href}
                           className={cn(
                             "ml-2.5 text-foreground/70 transition-colors hover:text-foreground",
                             pathname === item.href && "text-foreground",

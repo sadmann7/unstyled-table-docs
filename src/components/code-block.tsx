@@ -10,13 +10,15 @@ type CodeBlockProps = React.DetailedHTMLProps<
   React.HTMLAttributes<HTMLPreElement>,
   HTMLPreElement
 > & {
-  /** set by `rehype-pretty-code` */
+  // set by `rehype-pretty-code` 
   "data-language"?: string
-  /** set by `rehype-pretty-code` */
+  // set by `rehype-pretty-code`
   "data-theme"?: string
+  // set by `unist-util-visit`
+  raw?: string
 }
 
-export function CodeBlock({ children, ...props }: CodeBlockProps) {
+export function CodeBlock({ children, raw, ...props }: CodeBlockProps) {
   const language = props["data-language"] as string
   const theme = props["data-theme"] as string
   const Icon = {
@@ -41,7 +43,7 @@ export function CodeBlock({ children, ...props }: CodeBlockProps) {
       >
         {children}
       </pre>
-      <CopyButton text={children?.toString() ?? ""} />
+      <CopyButton text={raw ?? ""} />
     </>
   )
 }

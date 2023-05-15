@@ -5,7 +5,7 @@ import { buttonVariants } from "@/components/ui/button"
 
 export default function IndexPage() {
   return (
-    <section className="container grid w-full items-center gap-6 pb-8 pt-6 md:py-10">
+    <main className="container grid w-full items-center gap-6 pb-8 pt-6 md:py-10">
       <div className="mx-auto mt-20 flex max-w-md flex-col items-center gap-5">
         <h1 className="text-center text-3xl font-bold leading-tight tracking-tighter sm:text-3xl md:text-5xl lg:text-6xl">
           Unstyled Table
@@ -27,6 +27,6 @@ export default function IndexPage() {
           </div>
         </Link>
       </div>
-    </section>
+    </main>
   )
 }

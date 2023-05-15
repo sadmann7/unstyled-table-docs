@@ -22,7 +22,7 @@ export function DocsPager({ doc }: DocsPagerProps) {
   }
 
   return (
-    <div className="flex flex-row items-center justify-between">
+    <div className="flex flex-row items-center justify-start space-x-2.5">
       {pager?.prev?.href && (
         <Link
           href={pager.prev.href}
@@ -30,6 +30,7 @@ export function DocsPager({ doc }: DocsPagerProps) {
         >
           <Icons.chevronLeft className="mr-2 h-4 w-4" />
           {pager.prev.title}
+          <span className="sr-only">{pager.prev.title} page</span>
         </Link>
       )}
       {pager?.next?.href && (
@@ -39,6 +40,7 @@ export function DocsPager({ doc }: DocsPagerProps) {
         >
           {pager.next.title}
           <Icons.chevronRight className="ml-2 h-4 w-4" />
+          <span className="sr-only">{pager.next.title} page</span>
         </Link>
       )}
     </div>

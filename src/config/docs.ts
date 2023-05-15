@@ -120,8 +120,23 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
-          title: "Column visibility",
+          title: "Column Groups",
+          href: "/docs/examples/column-groups",
+          items: [],
+        },
+        {
+          title: "Column Visibility",
           href: "/docs/examples/column-visibility",
+          items: [],
+        },
+        {
+          title: "Filters",
+          href: "/docs/examples/filters",
+          items: [],
+        },
+        {
+          title: "Server Side Filters",
+          href: "/docs/examples/server-side-filters",
           items: [],
         },
         {
@@ -130,13 +145,28 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
+          title: "Server Side Pagination",
+          href: "/docs/examples/server-side-pagination",
+          items: [],
+        },
+        {
           title: "Sorting",
           href: "/docs/examples/sorting",
           items: [],
         },
         {
-          title: "Filtering",
-          href: "/docs/examples/filtering",
+          title: "Server Side Sorting",
+          href: "/docs/examples/server-side-sorting",
+          items: [],
+        },
+        {
+          title: "Fully Controlled",
+          href: "/docs/examples/fully-controlled",
+          items: [],
+        },
+        {
+          title: "Server Controlled",
+          href: "/docs/examples/server-controlled",
           items: [],
         },
         {
@@ -146,14 +176,26 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
-          title: "Editable Data",
-          href: "/docs/examples/editable-cells",
+          title: "Column Ordering",
+          href: "/docs/examples/column-ordering",
           disabled: true,
           items: [],
         },
         {
-          title: "Drag and Drop",
-          href: "/docs/examples/drag-and-drop",
+          title: "Column Ordering (DnD)",
+          href: "/docs/examples/column-dnd",
+          disabled: true,
+          items: [],
+        },
+        {
+          title: "Column Sizing",
+          href: "/docs/examples/column-sizing",
+          disabled: true,
+          items: [],
+        },
+        {
+          title: "Editable Data",
+          href: "/docs/examples/editable-cells",
           disabled: true,
           items: [],
         },

@@ -3,18 +3,23 @@ title: Header Cell
 description: This component renders the cells of the table.
 ---
 
-## Type definitions
+## Code
 
 ```tsx
-import type { HeaderGroup } from "@tanstack/react-table"
-
-export type HeaderComponent<TData> = FC<{
-  children: ReactNode
-  headerGroups: HeaderGroup<TData>[]
-}>
+<Table
+  columns={columns}
+  data={data}
+  renders={{
+    headerCell: ({ children, props }) => (
+      <th {...props} className="bg-muted-foreground">
+        {children}
+      </th>
+    ),
+  }}
+/>
 ```
 
-## Usage
+## Preview
 
 ```tsx
 import type { ComponentProps } from "react"

@@ -1,0 +1,181 @@
+---
+title: Table
+description: This component renders the full table.
+---
+
+The `<Table />` component is used to create a table. It is a wrapper around the `<table />` element and provides a lot of functionality like sorting, filtering, pagination, etc.
+
+```tsx
+export type TableComponent<TData> = FC<{
+  children: ReactNode
+  tableInstance: Table<TData>
+}>
+```
+
+## Options
+
+`data`
+
+```tsx
+data: TData[]
+```
+
+The array data to be displayed in the table.
+
+> **Note:** Make sure to provide an inline `[]` to avoid re-rendering the table when the data changes.
+
+`columns`
+
+```tsx
+columns: ColumnDef < TData, TValue > []
+```
+
+The array of columns to be displayed in the table.
+
+> **Note:** Make sure to memoize this array with the `useMemo` hook.
+
+### defaultColumn
+
+```tsx
+defaultColumn?: Partial<ColumnDef<TData, unknown>>
+```
+
+The optional default column definition.
+
+`initialState`
+
+```tsx
+initialState?: Partial<
+  VisibilityTableState &
+  ColumnOrderTableState &
+  ColumnPinningTableState &
+  FiltersTableState &
+  SortingTableState &
+  ExpandedTableState &
+  GroupingTableState &
+  ColumnSizingTableState &
+  PaginationTableState &
+  RowSelectionTableState
+>
+```
+
+> **Note:** Table state will not be reset when this object changes, which also means that the initial state object does not need to be stable.
+
+`state`
+
+```tsx
+  state?: {
+  sorting?: SortingState;
+  columnFilters?: ColumnFiltersState;
+  pagination?: PaginationState;
+  columnVisibility?: VisibilityState;
+  globalFilter?: string;
+};
+```
+
+The optional table state object if you want to control the state of the table. This state object will be merged with the internal state object.
+This state is used to implement pagination, sorting, filtering, etc.
+
+`setSorting`
+
+```tsx
+setSorting?: Dispatch<SetStateAction<SortingState>>
+```
+
+The optional sorting state setter is needed if you want to control the sorting state of the table. Server-side sorting can be implemented by providing a custom setter.
+
+`manualSorting`
+
+```tsx
+ manualSorting?: boolean;
+```
+
+This allows you to set your own sorting logic and bypass the sorting logic of the table. This is useful if you want to implement server-side sorting.
+
+`setColumnFilters`
+
+```tsx
+  setColumnFilters?: Dispatch<SetStateAction<ColumnFiltersState>>
+```
+
+The optional column filters state setter is needed if you want to control the column filters state of the table. Server-side filtering can be implemented by providing a custom setter.
+
+`manualFilters`
+
+```tsx
+manualFiltering?: boolean
+```
+
+This allows you to set your own filtering logic and bypass the filtering logic of the table. This is useful if you want to implement server-side filtering.
+
+`setPagination`
+
+```tsx
+setPagination?: Dispatch<SetStateAction<PaginationState>>
+```
+
+The optional pagination state setter is needed if you want to control the pagination state of the table. Server-side pagination can be implemented by providing a custom setter.
+
+`manualPagination`
+
+```tsx
+ manualPagination?: boolean
+```
+
+`hidePaginationBar`
+
+```tsx
+hidePaginationBar?: boolean
+```
+
+This allows you to hide the pagination bar of the table.
+
+This allows you to set your own pagination logic and bypass the pagination logic of the table. This is useful if you want to implement server-side pagination.
+
+`setColumnVisibility`
+
+```tsx
+setColumnVisibility?: Dispatch<SetStateAction<VisibilityState>>
+```
+
+The optional column visibility state setter is needed if you want to control the column visibility state of the table.
+
+`setGlobalFilter`
+
+```tsx
+ setGlobalFilter?: Dispatch<SetStateAction<string>>
+```
+
+`disableColumnVisibility`
+
+```tsx
+ disableColumnVisibility?: boolean
+```
+
+This allows you to disable the column visibility.
+
+The optional global filter state setter is needed if you want to control the global filter state of the table.
+
+`disableGlobalFilter`
+
+```tsx
+ disableGlobalFilter?: boolean
+```
+
+This allows you to disable the global filter.
+
+`itemsCount`
+
+```tsx
+itemsCount?: number
+```
+
+The optional items count is needed if you want to display the items count in the table.
+
+`showFooter`
+
+```tsx
+showFooter?: boolean
+```
+
+This allows you to show the footer of the table.

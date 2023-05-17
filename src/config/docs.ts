@@ -45,6 +45,11 @@ export const docsConfig: DocsConfig = {
       title: "Renderers",
       items: [
         {
+          title: "Table",
+          href: "/docs/renderers/table",
+          items: [],
+        },
+        {
           title: "Header",
           href: "/docs/renderers/header",
           items: [],

@@ -24,7 +24,7 @@ const nextConfig = {
     },
     {
       source: "/docs/renderers",
-      destination: "/docs/renderers/header",
+      destination: "/docs/renderers/table",
       permanent: true,
     },
     {

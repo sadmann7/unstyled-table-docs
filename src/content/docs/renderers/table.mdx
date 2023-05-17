@@ -34,7 +34,7 @@ The array of columns to be displayed in the table.
 
 > **Note:** Make sure to memoize this array with the `useMemo` hook.
 
-### defaultColumn
+`defaultColumn`
 
 ```tsx
 defaultColumn?: Partial<ColumnDef<TData, unknown>>
@@ -64,7 +64,7 @@ initialState?: Partial<
 `state`
 
 ```tsx
-  state?: {
+state?: {
   sorting?: SortingState;
   columnFilters?: ColumnFiltersState;
   pagination?: PaginationState;
@@ -87,7 +87,7 @@ The optional sorting state setter is needed if you want to control the sorting s
 `manualSorting`
 
 ```tsx
- manualSorting?: boolean;
+manualSorting?: boolean;
 ```
 
 This allows you to set your own sorting logic and bypass the sorting logic of the table. This is useful if you want to implement server-side sorting.
@@ -95,7 +95,7 @@ This allows you to set your own sorting logic and bypass the sorting logic of th
 `setColumnFilters`
 
 ```tsx
-  setColumnFilters?: Dispatch<SetStateAction<ColumnFiltersState>>
+setColumnFilters?: Dispatch<SetStateAction<ColumnFiltersState>>
 ```
 
 The optional column filters state setter is needed if you want to control the column filters state of the table. Server-side filtering can be implemented by providing a custom setter.
@@ -119,7 +119,7 @@ The optional pagination state setter is needed if you want to control the pagina
 `manualPagination`
 
 ```tsx
- manualPagination?: boolean
+manualPagination?: boolean
 ```
 
 `hidePaginationBar`
@@ -143,13 +143,13 @@ The optional column visibility state setter is needed if you want to control the
 `setGlobalFilter`
 
 ```tsx
- setGlobalFilter?: Dispatch<SetStateAction<string>>
+setGlobalFilter?: Dispatch<SetStateAction<string>>
 ```
 
 `disableColumnVisibility`
 
 ```tsx
- disableColumnVisibility?: boolean
+disableColumnVisibility?: boolean
 ```
 
 This allows you to disable the column visibility.
@@ -159,7 +159,7 @@ The optional global filter state setter is needed if you want to control the glo
 `disableGlobalFilter`
 
 ```tsx
- disableGlobalFilter?: boolean
+disableGlobalFilter?: boolean
 ```
 
 This allows you to disable the global filter.
@@ -178,4 +178,36 @@ The optional items count is needed if you want to display the items count in the
 showFooter?: boolean
 ```
 
-This allows you to show the footer of the table.
+This allows you to show or hide the footer of the table.
+
+`renderers`
+
+```tsx
+renders={{
+  headerCell: ({ children, props }) => (
+    <th {...props} className="bg-muted-foreground">
+            {children}
+          </th>
+        ),
+      }}
+```
+
+Renderers can be used to customized your table. These are basically functions that return fully customizable JSX elements.
+
+The following renderers are available:
+
+- `header`: Renders the table body.
+- `headerCell`: Renders the table header cell.
+- `headerRow`: Renders the table body.
+- `filterInput`: Renders the filter input.
+- `body`: Renders the table body.
+- `bodyCell`: Renders the table row.
+- `bodyRow`: Renders the table row.
+- `footer`: Renders the table footer.
+- `footerCell`: Renders the table footer cell.
+- `footerRow`: Renders the table footer row.
+- `pagination`: Renders the pagination.
+- `paginationButton`: Renders the pagination button.
+- `tableTag`: Renders the table tag.
+
+These renderers will be discussed in more detail in the following [Renderers](/docs/renderers/header) section.

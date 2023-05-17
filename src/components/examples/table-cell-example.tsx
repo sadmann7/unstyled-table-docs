@@ -14,7 +14,7 @@ const columns = [
   { accessorKey: "email", header: "Email" },
 ] satisfies ColumnDef<Data, unknown>[]
 
-export default function UnstyledTable() {
+export function TableCellExample() {
   const [data] = React.useState([
     { name: "Touha", email: "touha@example.com" },
     { name: "Sadman", email: "sadman@example.com" },

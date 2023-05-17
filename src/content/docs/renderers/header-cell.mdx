@@ -3,40 +3,55 @@ title: headerCell
 description: This component renders the cells of the table.
 ---
 
-```tsx
-import * as React from "react"
-import { Table, type ColumnDef } from "unstyled-table"
+## Preview
 
+<Examples renderer="headerCell" />
+
+## Code
+
+```tsx
+<Table
+  columns={columns}
+  data={data}
+  renders={{
+    headerCell: ({ children, props }) => (
+      <th
+        {...props}
+        className="border-collapse border px-4 pb-3.5 pt-10 text-left text-sm font-bold tracking-wide"
+      >
+        {children}
+      </th>
+    ),
+  }}
+/>
+```
+
+<details>
+<summary>Data</summary>
+```tsx
 type Data = {
   name: string
   email: string
-  stance: string
+  stance: "mongo" | "goofy"
 }
 
+const [data, setData] = React.useState<Data[]>([
+{ name: "Touha", email: "touha@example.com", stance: "mongo" },
+{ name: "Sadman", email: "sadman@example.com", stance: "goofy" },
+{ name: "Otaku Dev", email: "otakudev@example.com", stance: "mongo" },
+])
+
+````
+</details>
+
+<details>
+<summary>Columns</summary>
+```tsx
 const columns = [
   { accessorKey: "name", header: "Name" },
   { accessorKey: "email", header: "Email" },
+  { accessorKey: "stance", header: "Stance" },
 ] satisfies ColumnDef<Data, unknown>[]
+````
 
-export function TableCellExample() {
-  const [data] = React.useState<Data>([
-    { name: "Touha", email: "touha@example.com" },
-    { name: "Sadman", email: "sadman@example.com" },
-    { name: "Otaku Dev", email: "otakudev@example.com" },
-  ])
-
-  return (
-    <Table
-      columns={columns}
-      data={data}
-      renders={{
-        headerCell: ({ children, props }) => (
-          <th {...props} className="bg-muted-foreground">
-            {children}
-          </th>
-        ),
-      }}
-    />
-  )
-}
-```
+</details>

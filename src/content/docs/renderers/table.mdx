@@ -6,7 +6,7 @@ description: This component renders the full table.
 The `<Table />` component is used to create a table. It is a wrapper around the `<table />` element and provides a lot of functionality like sorting, filtering, pagination, etc.
 
 ```tsx
-export type TableComponent<TData> = FC<{
+type TableComponent<TData> = FC<{
   children: ReactNode
   tableInstance: Table<TData>
 }>
@@ -30,7 +30,7 @@ The array data to be displayed in the table.
 columns: ColumnDef < TData, TValue > []
 ```
 
-The array of columns to be displayed in the table.
+The array of columns to be displayed in the table. Here `type TValue = unknown`.
 
 > **Note:** Make sure to memoize this array with the `useMemo` hook.
 
@@ -122,6 +122,8 @@ The optional pagination state setter is needed if you want to control the pagina
 manualPagination?: boolean
 ```
 
+This allows you to set your own pagination logic and bypass the pagination logic of the table. This is useful if you want to implement server-side pagination.
+
 `hidePaginationBar`
 
 ```tsx
@@ -129,8 +131,6 @@ hidePaginationBar?: boolean
 ```
 
 This allows you to hide the pagination bar of the table.
-
-This allows you to set your own pagination logic and bypass the pagination logic of the table. This is useful if you want to implement server-side pagination.
 
 `setColumnVisibility`
 
@@ -146,6 +146,8 @@ The optional column visibility state setter is needed if you want to control the
 setGlobalFilter?: Dispatch<SetStateAction<string>>
 ```
 
+The optional global filter state setter is needed if you want to control the global filter state of the table.
+
 `disableColumnVisibility`
 
 ```tsx
@@ -153,8 +155,6 @@ disableColumnVisibility?: boolean
 ```
 
 This allows you to disable the column visibility.
-
-The optional global filter state setter is needed if you want to control the global filter state of the table.
 
 `disableGlobalFilter`
 

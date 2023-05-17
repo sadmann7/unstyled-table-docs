@@ -12,7 +12,7 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 import { AspectRatio } from "@/components/ui/aspect-ratio"
 import { Callout } from "@/components/callout"
 import { CodeBlock } from "@/components/code-block"
-import { ExampleWithCode } from "@/components/example-with-code"
+import { CodeWithExample } from "@/components/code-with-example"
 
 /** Originally from `shadcn/ui-docs`
  * @link https://github.com/shadcn/ui/blob/main/apps/www/components/mdx-components.tsx
@@ -160,7 +160,7 @@ const components = {
   AlertDescription,
   Callout,
   AspectRatio,
-  ExampleWithCode,
+  CodeWithExample,
   Steps: ({ ...props }) => (
     <div
       className="[&>h3]:step mb-12 ml-4 border-l pl-6 [counter-reset:step]"

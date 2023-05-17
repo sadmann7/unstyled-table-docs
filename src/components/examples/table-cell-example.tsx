@@ -6,7 +6,6 @@ import { Table, type ColumnDef } from "unstyled-table"
 type Data = {
   name: string
   email: string
-  stance: string
 }
 
 const columns = [
@@ -15,7 +14,7 @@ const columns = [
 ] satisfies ColumnDef<Data, unknown>[]
 
 export function TableCellExample() {
-  const [data] = React.useState([
+  const [data] = React.useState<Data[]>([
     { name: "Touha", email: "touha@example.com" },
     { name: "Sadman", email: "sadman@example.com" },
     { name: "Otaku Dev", email: "otakudev@example.com" },

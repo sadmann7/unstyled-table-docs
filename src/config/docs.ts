@@ -13,7 +13,7 @@ export const docsConfig: DocsConfig = {
     },
     {
       title: "Renderers",
-      href: "/docs/renderers/header",
+      href: "/docs/renderers/table",
     },
     {
       title: "Examples",

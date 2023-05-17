@@ -37,7 +37,7 @@ export function CodeBlock({ children, raw, ...props }: CodeBlockProps) {
         />
       )}
       <pre
-        className="relative my-4 overflow-x-auto rounded-lg border bg-muted p-4 font-mono text-sm font-semibold text-muted-foreground"
+        className="relative max-h-[640px] my-4 overflow-x-auto rounded-lg border bg-muted p-4 font-mono text-sm font-semibold text-muted-foreground"
         {...props}
       >
         <CopyButton text={raw ?? ""} />

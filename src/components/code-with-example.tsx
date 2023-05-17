@@ -6,18 +6,18 @@ import { cn } from "@/lib/utils"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { CopyButton } from "@/components/copy-button"
 
-interface ExampleWithCodeProps extends React.HTMLAttributes<HTMLDivElement> {
+interface CodeWithExampleProps extends React.HTMLAttributes<HTMLDivElement> {
   align?: "center" | "start" | "end"
   src?: string
 }
 
-export function ExampleWithCode({
+export function CodeWithExample({
   children,
   className,
   align = "center",
   src: _,
   ...props
-}: ExampleWithCodeProps) {
+}: CodeWithExampleProps) {
   const [Example, Code, ...Children] = React.Children.toArray(
     children
   ) as React.ReactElement[]

@@ -133,6 +133,10 @@
   [data-theme="dark"]:not([data-language-icon]) {
     @apply hidden dark:block;
   }
+
+  table {
+    @apply mt-6;
+  }
 }
 
 [data-rehype-pretty-code-fragment] .line--highlighted {

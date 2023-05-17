@@ -1,4 +1,6 @@
-import { TableCellExample } from "./table-cell-example"
+import { TableHeader } from "./table-header"
+import { TableHeaderCell } from "./table-header-cell"
+import { TableHeaderRow } from "./table-header-row"
 
 interface ExamplesProps {
   renderer:
@@ -18,7 +20,11 @@ interface ExamplesProps {
 }
 
 export function Examples({ renderer }: ExamplesProps) {
-  if (renderer === "headerCell") return <TableCellExample />
+  if (renderer === "headerCell") return <TableHeaderCell />
+
+  if (renderer === "header") return <TableHeader />
+
+  if (renderer === "headerRow") return <TableHeaderRow />
 
   return null
 }

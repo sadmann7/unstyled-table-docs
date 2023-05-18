@@ -2,12 +2,6 @@ import Image from "next/image"
 import { useMDXComponent } from "next-contentlayer/hooks"
 
 import { cn } from "@/lib/utils"
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion"
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 import { AspectRatio } from "@/components/ui/aspect-ratio"
 import { Callout } from "@/components/callout"
@@ -140,6 +134,7 @@ const components = {
   //     {...props}
   //   />
   // ),
+
   pre: CodeBlock,
   code: ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => (
     <code
@@ -151,10 +146,6 @@ const components = {
     />
   ),
   Image,
-  Accordion,
-  AccordionItem,
-  AccordionTrigger,
-  AccordionContent,
   Alert,
   AlertTitle,
   AlertDescription,

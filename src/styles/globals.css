@@ -90,7 +90,7 @@
   }
 
   .step:before {
-    @apply absolute inline-flex h-8 w-8 items-center justify-center rounded-full bg-accent text-center -indent-px font-sans text-base font-medium;
+    @apply absolute inline-flex h-8 w-8 items-center justify-center rounded-full bg-accent text-center -indent-px  text-base font-medium;
     @apply ml-[-41px];
     content: counter(step);
   }
@@ -107,7 +107,7 @@
 
   [data-rehype-pretty-code-title] {
     padding: 0.75rem 0 0.75rem 2.5rem;
-    @apply mt-4 rounded-t-lg border border-b-0 bg-accent font-sans;
+    @apply mt-4 rounded-t-lg border border-b-0 bg-accent;
   }
 
   [data-rehype-pretty-code-title]:has(+ [data-language-icon]) {
@@ -136,6 +136,14 @@
 
   table {
     @apply mt-6;
+  }
+
+  details {
+    @apply border p-4;
+  }
+
+  summary {
+    @apply cursor-pointer font-medium hover:underline;
   }
 }
 

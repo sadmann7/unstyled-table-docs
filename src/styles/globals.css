@@ -101,6 +101,10 @@
     @apply relative;
   }
 
+  [data-rehype-pretty-code-fragment] button:first-of-type {
+    @apply hidden;
+  }
+
   [data-language-icon] {
     @apply hidden;
   }
@@ -139,11 +143,15 @@
   }
 
   details {
-    @apply border p-4;
+    @apply border-b;
   }
 
   summary {
-    @apply cursor-pointer font-medium hover:underline;
+    @apply cursor-pointer py-4 font-medium hover:underline;
+  }
+
+  details pre {
+    @apply !mt-2.5;
   }
 }
 

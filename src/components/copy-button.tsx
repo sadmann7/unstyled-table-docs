@@ -5,22 +5,20 @@ import * as React from "react"
 import { Button, type ButtonProps } from "@/components/ui/button"
 import { Icons } from "@/components/icons"
 
-interface CopyButtonProps extends ButtonProps {
-  text: string
-}
+type CopyButtonProps = ButtonProps
 
-export function CopyButton({ text, ...props }: CopyButtonProps) {
+export function CopyButton({ value, ...props }: CopyButtonProps) {
   const [isCopied, setIsCopied] = React.useState(false)
 
   return (
     <Button
       variant="outline"
       size="sm"
-      className="absolute right-4 top-4 z-20 h-6 w-6 px-0"
+      className="absolute right-5 top-4 z-20 h-6 w-6 px-0"
       onClick={() => {
         if (typeof window === "undefined") return
         setIsCopied(true)
-        void window.navigator.clipboard.writeText(text)
+        void window.navigator.clipboard.writeText(value?.toString() ?? "")
         setTimeout(() => setIsCopied(false), 2000)
       }}
       {...props}

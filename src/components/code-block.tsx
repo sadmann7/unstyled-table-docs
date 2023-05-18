@@ -33,14 +33,14 @@ export function CodeBlock({ children, raw, ...props }: CodeBlockProps) {
         <Icon
           data-language-icon
           data-theme={theme}
-          className="absolute left-4 top-4 z-20 h-5 w-5 text-foreground"
+          className="absolute left-5 top-4 z-20 h-5 w-5 text-foreground"
         />
       )}
+      <CopyButton value={raw} />
       <pre
         className="relative my-4 max-h-[640px] overflow-x-auto rounded-lg border bg-muted p-4 font-mono text-sm font-semibold text-muted-foreground"
         {...props}
       >
-        <CopyButton text={raw ?? ""} />
         {children}
       </pre>
     </>

@@ -36,7 +36,7 @@ interface SidebarNavItemsProps {
 
 export function SidebarNavItems({ items, pathname }: SidebarNavItemsProps) {
   return items?.length ? (
-    <div className="grid grid-flow-row auto-rows-max text-sm">
+    <div className="ml-2.5 grid grid-flow-row auto-rows-max text-sm">
       {items.map((item, index) =>
         item.href ? (
           <Link
@@ -45,7 +45,7 @@ export function SidebarNavItems({ items, pathname }: SidebarNavItemsProps) {
             className={cn(
               "group flex w-full items-center rounded-md border border-transparent px-2 py-1 hover:underline",
               pathname === item.href
-                ? "font-medium text-foreground"
+                ? "bg-muted font-medium text-foreground"
                 : "text-muted-foreground",
               item.disabled && "pointer-events-none opacity-60"
             )}

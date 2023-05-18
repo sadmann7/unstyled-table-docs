@@ -31,31 +31,36 @@ export function TableHeaderCell() {
       stance: "goofy",
     },
     {
-      name: "Guy",
-      email: "guy@example.com",
+      name: "Kareem",
+      email: "kareem@example.com",
       stance: "mongo",
     },
     {
-      name: "Skater",
-      email: "skater@example.com",
+      name: "Eric",
+      email: "bob@example.com",
+      stance: "mongo",
+    },
+    {
+      name: "Bam",
+      email: "bam@example.com",
       stance: "goofy",
     },
     {
-      name: "Dude",
-      email: "dude@example.com",
-      stance: "mongo",
-    },
-    {
-      name: "John",
-      email: "john@example.com",
+      name: "Nyjah",
+      email: "nyjah@example.com",
       stance: "goofy",
     },
     {
-      name: "Gordon",
-      email: "gordon@example.com",
+      name: "Andrew",
+      email: "andrew@example.com",
       stance: "mongo",
     },
-    { name: "Alex", email: "alex@example.com", stance: "goofy" },
+    {
+      name: "Lizzie",
+      email: "lizzie@example.com",
+      stance: "goofy",
+    },
+    { name: "Leticia", email: "leticia@example.com", stance: "goofy" },
   ])
 
   return (

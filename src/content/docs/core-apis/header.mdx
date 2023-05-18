@@ -3,9 +3,7 @@ title: Header
 description: The header object represents a header cell in the table.
 ---
 
-## Header API
-
-All header objects have the following properties:
+## API Options
 
 ### `id`
 
@@ -37,7 +35,7 @@ The depth of the header, zero-indexed based.
 column: Column<TData>
 ```
 
-The header's associated [Column](./column.md) object
+The header's associated [Column](./column) object
 
 ### `headerGroup`
 
@@ -45,7 +43,7 @@ The header's associated [Column](./column.md) object
 headerGroup: HeaderGroup<TData>
 ```
 
-The header's associated [HeaderGroup](./header-group.md) object
+The header's associated [HeaderGroup](./header-group) object
 
 ### `subHeaders`
 
@@ -110,3 +108,7 @@ Returns the rendering context (or props) for column-based components like header
 ```tsx
 flexRender(header.column.columnDef.header, header.getContext())
 ```
+
+## Credits
+
+- [Header](https://tanstack.com/table/v8/docs/api/core/header) - TanStack Table `v8` Docs

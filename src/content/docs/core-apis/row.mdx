@@ -3,9 +3,7 @@ title: Row
 description: The Row object represents a row in the table.
 ---
 
-## Row API
-
-All row objects have the following properties:
+## API Options
 
 ### `id`
 
@@ -39,7 +37,7 @@ original: TData
 
 The original row object provided to the table.
 
-> 🧠 If the row is a grouped row, the original row object will be the first original in the group.
+> If the row is a grouped row, the original row object will be the first original in the group.
 
 ### `parentId`
 
@@ -103,4 +101,8 @@ An array of the original subRows as returned by the `options.getSubRows` option.
 type getAllCells = () => Cell<TData>[]
 ```
 
-Returns all of the [Cells](./cell.md) for the row.
+Returns all of the [Cells](./cell) for the row.
+
+## Credits
+
+- [Row](https://tanstack.com/table/v8/docs/api/core/row) - TanStack Table `v8` Docs

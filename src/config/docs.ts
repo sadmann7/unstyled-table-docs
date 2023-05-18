@@ -12,8 +12,12 @@ export const docsConfig: DocsConfig = {
       href: "/docs/introduction",
     },
     {
+      title: "Core APIs",
+      href: "/docs/core-apis/column-def",
+    },
+    {
       title: "Renderers",
-      href: "/docs/renderers/table",
+      href: "/docs/renderers/header",
     },
     {
       title: "Examples",
@@ -162,51 +166,61 @@ export const docsConfig: DocsConfig = {
         {
           title: "Column Groups",
           href: "/docs/examples/column-groups",
+          disabled: true,
           items: [],
         },
         {
           title: "Column Visibility",
           href: "/docs/examples/column-visibility",
+          disabled: true,
           items: [],
         },
         {
           title: "Filters",
           href: "/docs/examples/filters",
+          disabled: true,
           items: [],
         },
         {
           title: "Server Side Filters",
           href: "/docs/examples/server-side-filters",
+          disabled: true,
           items: [],
         },
         {
           title: "Pagination",
           href: "/docs/examples/pagination",
+          disabled: true,
           items: [],
         },
         {
           title: "Server Side Pagination",
           href: "/docs/examples/server-side-pagination",
+          disabled: true,
           items: [],
         },
         {
           title: "Sorting",
           href: "/docs/examples/sorting",
+          disabled: true,
           items: [],
         },
         {
           title: "Server Side Sorting",
           href: "/docs/examples/server-side-sorting",
+          disabled: true,
           items: [],
         },
         {
           title: "Fully Controlled",
           href: "/docs/examples/fully-controlled",
+          disabled: true,
           items: [],
         },
         {
           title: "Server Controlled",
           href: "/docs/examples/server-controlled",
+          disabled: true,
           items: [],
         },
         {

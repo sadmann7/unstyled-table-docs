@@ -11,6 +11,9 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   pageExtensions: ["ts", "tsx", "mdx"],
+  experimental: {
+    mdxRs: true,
+  },
   redirects: async () => [
     {
       source: "/docs",
@@ -23,8 +26,13 @@ const nextConfig = {
       permanent: true,
     },
     {
+      source: "/docs/core-apis",
+      destination: "/docs/core-apis/column-def",
+      permanent: true,
+    },
+    {
       source: "/docs/renderers",
-      destination: "/docs/renderers/table",
+      destination: "/docs/renderers/header",
       permanent: true,
     },
     {
@@ -33,9 +41,6 @@ const nextConfig = {
       permanent: true,
     },
   ],
-  experimental: {
-    mdxRs: true,
-  },
 }
 
 export default withContentlayer(nextConfig)

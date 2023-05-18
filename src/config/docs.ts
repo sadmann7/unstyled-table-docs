@@ -139,7 +139,7 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
-          title: "Pagination Renderer",
+          title: "Pagination",
           href: "/docs/renderers/pagination",
           items: [],
         },

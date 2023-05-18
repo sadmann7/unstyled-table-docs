@@ -134,7 +134,6 @@ const components = {
   //     {...props}
   //   />
   // ),
-
   pre: CodeBlock,
   code: ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => (
     <code

@@ -139,7 +139,7 @@
   }
 
   table {
-    @apply mt-6;
+    @apply my-6;
   }
 
   details {
@@ -150,8 +150,9 @@
     @apply cursor-pointer py-4 font-medium hover:underline;
   }
 
-  details pre {
-    @apply !mt-2.5;
+  details pre:first-of-type,
+  details pre:last-of-type {
+    @apply mt-2;
   }
 }
 

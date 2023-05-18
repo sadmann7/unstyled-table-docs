@@ -3,8 +3,6 @@
 import * as React from "react"
 import { Table, type ColumnDef } from "unstyled-table"
 
-import { Input } from "../ui/input"
-
 type Data = {
   name: string
   email: string
@@ -70,15 +68,7 @@ export function TableFooterRow() {
       columns={columns}
       data={data}
       renders={{
-        filterInput: ({ props }) => (
-          <Input
-            className="mt-2.5"
-            placeholder={props.placeholder}
-            value={props.value}
-            onChange={props.onChange}
-            {...props}
-          />
-        ),
+        footerRow: ({ children, footerGroup }) => <tr>{children}</tr>,
       }}
     />
   )

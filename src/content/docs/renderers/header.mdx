@@ -3,9 +3,12 @@ title: header
 description: This component renders the headers of the table.
 ---
 
-## Preview
+## API Options
 
-<Example renderer="header" />
+The header renderer takes two arguments:
+
+- `children` - The children of the header renderer. This is the header row.
+- `headerGroups` - The array of [header group](/docs/core-apis/header-group). This is useful for creating nested headers.
 
 ## Code
 
@@ -89,3 +92,7 @@ const columns = [
 ````
 
 </details>
+
+## Preview
+
+<Example renderer="header" />

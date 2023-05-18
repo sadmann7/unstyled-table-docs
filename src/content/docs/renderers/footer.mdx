@@ -14,7 +14,7 @@ description: This component renders the footer of the table.
   columns={columns}
   data={data}
   renders={{
-    body: ({ children }) => <tbody>{children}</tbody>,
+    footer: ({ children, footerGroups }) => <tfoot>{children}</tfoot>,
   }}
 />
 ```

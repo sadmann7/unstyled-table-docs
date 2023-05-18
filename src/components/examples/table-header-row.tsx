@@ -69,7 +69,7 @@ export function TableHeaderRow() {
       columns={columns}
       data={data}
       renders={{
-        headerRow: ({ children }) => <tr>{children}</tr>,
+        headerRow: ({ children, headerGroup }) => <tr>{children}</tr>,
       }}
     />
   )

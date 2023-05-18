@@ -3,6 +3,8 @@
 import * as React from "react"
 import { Table, type ColumnDef } from "unstyled-table"
 
+import { Input } from "../ui/input"
+
 type Data = {
   name: string
   email: string
@@ -15,7 +17,7 @@ const columns = [
   { accessorKey: "stance", header: "Stance" },
 ] satisfies ColumnDef<Data, unknown>[]
 
-export function TableBody() {
+export function TablePaginationButton() {
   const [data, setData] = React.useState<Data[]>([
     { name: "Touha", email: "touha@example.com", stance: "mongo" },
     { name: "Sadman", email: "sadman@example.com", stance: "goofy" },
@@ -63,7 +65,15 @@ export function TableBody() {
       columns={columns}
       data={data}
       renders={{
-        body: ({ children }) => <tbody>{children}</tbody>,
+        filterInput: ({ props }) => (
+          <Input
+            className="mt-2.5"
+            placeholder={props.placeholder}
+            value={props.value}
+            onChange={props.onChange}
+            {...props}
+          />
+        ),
       }}
     />
   )

@@ -1,18 +1,18 @@
-import { TableBody } from "./table-body"
-import { TableBodyCell } from "./table-body-cell"
-import { TableBodyRow } from "./table-body-row"
-import { TableFilterInput } from "./table-filter-input"
-import { TableFooter } from "./table-footer"
-import { TableFooterCell } from "./table-footer-cell"
-import { TableFooterRow } from "./table-footer-row"
-import { TableHeader } from "./table-header"
-import { TableHeaderCell } from "./table-header-cell"
-import { TableHeaderRow } from "./table-header-row"
-import { TablePagination } from "./table-pagination"
-import { TablePaginationButton } from "./table-pagination-button"
-import { TableTag } from "./table-tag"
+import { TableBody } from "./examples/table-body"
+import { TableBodyCell } from "./examples/table-body-cell"
+import { TableBodyRow } from "./examples/table-body-row"
+import { TableFilterInput } from "./examples/table-filter-input"
+import { TableFooter } from "./examples/table-footer"
+import { TableFooterCell } from "./examples/table-footer-cell"
+import { TableFooterRow } from "./examples/table-footer-row"
+import { TableHeader } from "./examples/table-header"
+import { TableHeaderCell } from "./examples/table-header-cell"
+import { TableHeaderRow } from "./examples/table-header-row"
+import { TablePagination } from "./examples/table-pagination"
+import { TablePaginationButton } from "./examples/table-pagination-button"
+import { TableTag } from "./examples/table-tag"
 
-interface ExamplesProps {
+interface ExampleProps {
   renderer:
     | "header"
     | "headerCell"
@@ -29,7 +29,7 @@ interface ExamplesProps {
     | "tableTag"
 }
 
-export function Examples({ renderer }: ExamplesProps) {
+export function Example({ renderer }: ExampleProps) {
   if (renderer === "headerCell") return <TableHeaderCell />
 
   if (renderer === "header") return <TableHeader />

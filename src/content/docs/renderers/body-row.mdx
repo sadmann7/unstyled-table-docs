@@ -5,7 +5,7 @@ description: This component renders the body rows of the table.
 
 ## Preview
 
-<Examples renderer="bodyRow" />
+<Example renderer="bodyRow" />
 
 ## Code
 
@@ -16,8 +16,14 @@ description: This component renders the body rows of the table.
   renders={{
     bodyRow: ({ children, row }) => (
       <tr
-        onClick={() => toast.success(`You clicked on ${row.getValue("name")}`)}
-        className="border-b border-neutral-500"
+        onClick={() =>
+          toast.success(
+            `You clicked on ${row.getValue<
+              (typeof columns)[number]["accessorKey"]
+            >("name")}`
+          )
+        }
+        className="cursor-pointer border-b border-neutral-500"
       >
         {children}
       </tr>
@@ -77,7 +83,7 @@ stance: "mongo",
 {
 name: "Lizzie",
 email: "lizzie@example.com",
-stance: "mongo",
+stance: "goofy",
 },
 { name: "Leticia", email: "leticia@example.com", stance: "goofy" },
 ])

@@ -59,7 +59,7 @@ export function TableBodyRow() {
     {
       name: "Lizzie",
       email: "lizzie@example.com",
-      stance: "mongo",
+      stance: "goofy",
     },
     { name: "Leticia", email: "leticia@example.com", stance: "goofy" },
   ])
@@ -73,10 +73,9 @@ export function TableBodyRow() {
           <tr
             onClick={() =>
               toast.success(
-                `You clicked on ${
-                  // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
-                  row.getValue("name")
-                }`
+                `You clicked on ${row.getValue<
+                  (typeof columns)[number]["accessorKey"]
+                >("name")}`
               )
             }
             className="cursor-pointer border-b border-neutral-500"

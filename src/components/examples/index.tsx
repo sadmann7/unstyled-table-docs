@@ -1,3 +1,4 @@
+import { TableFilterInput } from "./table-filter-input"
 import { TableHeader } from "./table-header"
 import { TableHeaderCell } from "./table-header-cell"
 import { TableHeaderRow } from "./table-header-row"
@@ -25,6 +26,8 @@ export function Examples({ renderer }: ExamplesProps) {
   if (renderer === "header") return <TableHeader />
 
   if (renderer === "headerRow") return <TableHeaderRow />
+
+  if (renderer === "filterInput") return <TableFilterInput />
 
   return null
 }

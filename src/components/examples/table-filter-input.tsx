@@ -1,8 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { toast } from "react-hot-toast"
 import { Table, type ColumnDef } from "unstyled-table"
+
+import { DebouncedInput } from "../ui/debounced"
+import { Input } from "../ui/input"
 
 type Data = {
   name: string
@@ -16,7 +18,7 @@ const columns = [
   { accessorKey: "stance", header: "Stance" },
 ] satisfies ColumnDef<Data, unknown>[]
 
-export function TableHeaderRow() {
+export function TableFilterInput() {
   const [data, setData] = React.useState<Data[]>([
     { name: "Touha", email: "touha@example.com", stance: "mongo" },
     { name: "Sadman", email: "sadman@example.com", stance: "goofy" },
@@ -64,7 +66,15 @@ export function TableHeaderRow() {
       columns={columns}
       data={data}
       renders={{
-        headerRow: ({ children }) => <tr>{children}</tr>,
+        filterInput: ({ props }) => (
+          <Input
+            className="mt-2.5"
+            placeholder={props.placeholder}
+            value={props.value}
+            onChange={props.onChange}
+            {...props}
+          />
+        ),
       }}
     />
   )

@@ -14,14 +14,7 @@ description: This component renders the header rows of the table.
   columns={columns}
   data={data}
   renders={{
-    headerCell: ({ children, props }) => (
-      <th
-        {...props}
-        className="border-collapse border px-4 pb-3.5 pt-10 text-left text-sm font-bold tracking-wide"
-      >
-        {children}
-      </th>
-    ),
+    headerRow: ({ children }) => <tr>{children}</tr>,
   }}
 />
 ```

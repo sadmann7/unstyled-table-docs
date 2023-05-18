@@ -63,9 +63,7 @@ export function TableHeader() {
       columns={columns}
       data={data}
       renders={{
-        header: ({ children, headerGroups }) => (
-          <thead className="rounded-full">{children}</thead>
-        ),
+        header: ({ children, headerGroups }) => <thead>{children}</thead>,
       }}
     />
   )

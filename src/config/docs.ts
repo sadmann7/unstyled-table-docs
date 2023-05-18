@@ -66,7 +66,7 @@ export const docsConfig: DocsConfig = {
         },
         {
           title: "Filter Input",
-          href: "/docs/renderers/body",
+          href: "/docs/renderers/filter-input",
           items: [],
         },
         {

@@ -3,7 +3,7 @@
 import * as React from "react"
 import { Table, type ColumnDef } from "unstyled-table"
 
-import { Input } from "../ui/input"
+import { cn } from "@/lib/utils"
 
 type Data = {
   name: string
@@ -65,14 +65,17 @@ export function TableBodyCell() {
       columns={columns}
       data={data}
       renders={{
-        filterInput: ({ props }) => (
-          <Input
-            className="mt-2.5"
-            placeholder={props.placeholder}
-            value={props.value}
-            onChange={props.onChange}
+        bodyCell: ({ cell, children, props }) => (
+          <td
             {...props}
-          />
+            className={cn(
+              "px-4 py-2.5",
+              cell.getValue() === "mongo" && "text-red-500",
+              cell.getValue() === "goofy" && "text-blue-500"
+            )}
+          >
+            {children}
+          </td>
         ),
       }}
     />

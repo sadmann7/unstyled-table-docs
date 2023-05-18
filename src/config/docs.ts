@@ -42,26 +42,61 @@ export const docsConfig: DocsConfig = {
       ],
     },
     {
-      title: "Renderers",
+      title: "Core APIs",
       items: [
         {
-          title: "Table",
-          href: "/docs/renderers/table",
+          title: "Column Def",
+          href: "/docs/core-apis/column-def",
           items: [],
         },
+        {
+          title: "Table",
+          href: "/docs/core-apis/table",
+          items: [],
+        },
+        {
+          title: "Column",
+          href: "/docs/core-apis/column",
+          items: [],
+        },
+        {
+          title: "Header Group",
+          href: "/docs/core-apis/header-group",
+          items: [],
+        },
+        {
+          title: "Header",
+          href: "/docs/core-apis/header",
+          items: [],
+        },
+        {
+          title: "Row",
+          href: "/docs/core-apis/row",
+          items: [],
+        },
+        {
+          title: "Cell",
+          href: "/docs/core-apis/cell",
+          items: [],
+        },
+      ],
+    },
+    {
+      title: "Renderers",
+      items: [
         {
           title: "Header",
           href: "/docs/renderers/header",
           items: [],
         },
         {
-          title: "Header Cell",
-          href: "/docs/renderers/header-cell",
+          title: "Header Row",
+          href: "/docs/renderers/header-row",
           items: [],
         },
         {
-          title: "Header Row",
-          href: "/docs/renderers/header-row",
+          title: "Header Cell",
+          href: "/docs/renderers/header-cell",
           items: [],
         },
         {
@@ -75,13 +110,13 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
-          title: "Body Cell",
-          href: "/docs/renderers/body-cell",
+          title: "Body Row",
+          href: "/docs/renderers/body-row",
           items: [],
         },
         {
-          title: "Body Row",
-          href: "/docs/renderers/body-row",
+          title: "Body Cell",
+          href: "/docs/renderers/body-cell",
           items: [],
         },
         {
@@ -90,13 +125,13 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
-          title: "Footer Cell",
-          href: "/docs/renderers/footer-cell",
+          title: "Footer Row",
+          href: "/docs/renderers/footer-row",
           items: [],
         },
         {
-          title: "Footer Row",
-          href: "/docs/renderers/footer-row",
+          title: "Footer Cell",
+          href: "/docs/renderers/footer-cell",
           items: [],
         },
         {

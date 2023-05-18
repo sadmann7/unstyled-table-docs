@@ -14,7 +14,18 @@ description: This component renders the body cells of the table.
   columns={columns}
   data={data}
   renders={{
-    body: ({ children }) => <tbody>{children}</tbody>,
+    bodyCell: ({ cell, children, props }) => (
+      <td
+        {...props}
+        className={cn(
+          "px-4 py-2.5",
+          cell.getValue() === "mongo" && "text-red-500",
+          cell.getValue() === "goofy" && "text-blue-500"
+        )}
+      >
+        {children}
+      </td>
+    ),
   }}
 />
 ```

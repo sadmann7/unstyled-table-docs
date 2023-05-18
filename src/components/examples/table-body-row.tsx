@@ -1,9 +1,8 @@
 "use client"
 
 import * as React from "react"
+import { toast } from "react-hot-toast"
 import { Table, type ColumnDef } from "unstyled-table"
-
-import { Input } from "../ui/input"
 
 type Data = {
   name: string
@@ -65,14 +64,20 @@ export function TableBodyRow() {
       columns={columns}
       data={data}
       renders={{
-        filterInput: ({ props }) => (
-          <Input
-            className="mt-2.5"
-            placeholder={props.placeholder}
-            value={props.value}
-            onChange={props.onChange}
-            {...props}
-          />
+        bodyRow: ({ children, row }) => (
+          <tr
+            onClick={() =>
+              toast.success(
+                `You clicked on ${
+                  // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
+                  row.getValue("name")
+                }`
+              )
+            }
+            className="cursor-pointer border-b border-neutral-500"
+          >
+            {children}
+          </tr>
         ),
       }}
     />

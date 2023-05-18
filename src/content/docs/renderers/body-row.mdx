@@ -14,7 +14,14 @@ description: This component renders the body rows of the table.
   columns={columns}
   data={data}
   renders={{
-    body: ({ children }) => <tbody>{children}</tbody>,
+    bodyRow: ({ children, row }) => (
+      <tr
+        onClick={() => toast.success(`You clicked on ${row.getValue("name")}`)}
+        className="border-b border-neutral-500"
+      >
+        {children}
+      </tr>
+    ),
   }}
 />
 ```

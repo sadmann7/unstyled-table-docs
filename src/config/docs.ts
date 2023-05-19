@@ -86,6 +86,61 @@ export const docsConfig: DocsConfig = {
       ],
     },
     {
+      title: "Feature APIs",
+      items: [
+        {
+          title: "Column Ordering",
+          href: "/docs/feature-apis/column-ordering",
+          items: [],
+        },
+        {
+          title: "Column Pinning",
+          href: "/docs/feature-apis/column-pinning",
+          items: [],
+        },
+        {
+          title: "Column Sizing",
+          href: "/docs/feature-apis/column-sizing",
+          items: [],
+        },
+        {
+          title: "Column Visibility",
+          href: "/docs/feature-apis/column-visibility",
+          items: [],
+        },
+        {
+          title: "Filters",
+          href: "/docs/feature-apis/filters",
+          items: [],
+        },
+        {
+          title: "Sorting",
+          href: "/docs/feature-apis/sorting",
+          items: [],
+        },
+        {
+          title: "Grouping",
+          href: "/docs/feature-apis/grouping",
+          items: [],
+        },
+        {
+          title: "Expanding",
+          href: "/docs/feature-apis/expanding",
+          items: [],
+        },
+        {
+          title: "Pagination",
+          href: "/docs/feature-apis/pagination",
+          items: [],
+        },
+        {
+          title: "Row Selection",
+          href: "/docs/feature-apis/row-selection",
+          items: [],
+        },
+      ],
+    },
+    {
       title: "Renderers",
       items: [
         {
@@ -139,8 +194,8 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
-          title: "Pagination",
-          href: "/docs/renderers/pagination",
+          title: "Pagination Bar",
+          href: "/docs/renderers/pagination-bar",
           items: [],
         },
         {

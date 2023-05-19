@@ -1,0 +1,138 @@
+---
+title: paginationBar
+description: This component renders the pagination bar of the table.
+---
+
+## Props
+
+The pagination bar renderer receives the following props:
+
+- `tableInstance` - The table instance.
+- `btn` - The button component.
+- `firstBtn` - The first page button component.
+- `gotoPageInput` - The goto page input component.
+- `itemsPerPageOptions` - The items per page options component.
+- `lastBtn` - The last page button component.
+- `nextBtn` - The next page button component.
+- `perpageSelect` - The per page select component.
+- `prevBtn` - The previous page button component.
+
+See the [pagination](/docs/feature-apis/pagination) feature API for more details.
+
+## Prerequisites
+
+<Alert>
+  <AlertDescription>
+  
+    Any external pagination libraries can be used, or you can make your own pagination component.
+    Here we are using the [react-paginate](https://www.npmjs.com/package/react-paginate) library.
+
+  </AlertDescription>
+</Alert>
+
+## Preview
+
+<Example renderer="paginationBar" />
+
+## Code
+
+```tsx
+<Table
+  columns={columns}
+  data={data}
+  renders={{
+    paginationBar: ({
+      tableInstance,
+      btn,
+      firstBtn,
+      gotoPageInput,
+      itemsPerPageOptions,
+      lastBtn,
+      nextBtn,
+      perpageSelect,
+      prevBtn,
+    }) => (
+      <ReactPaginate
+        className="flex items-center gap-2.5"
+        pageCount={tableInstance.getState().pagination.pageSize}
+        pageRangeDisplayed={5}
+        marginPagesDisplayed={2}
+        onPageChange={({ selected }) => {
+          tableInstance.setPageIndex(selected)
+        }}
+      />
+    ),
+  }}
+/>
+```
+
+<details>
+<summary>Data</summary>
+```tsx
+type Data = {
+  name: string
+  email: string
+  stance: "mongo" | "goofy"
+}
+
+const [data, setData] = React.useState<Data[]>([
+{ name: "Touha", email: "touha@example.com", stance: "mongo" },
+{ name: "Sadman", email: "sadman@example.com", stance: "goofy" },
+{ name: "Otaku Dev", email: "otakudev@example.com", stance: "mongo" },
+{
+name: "Tony",
+email: "tonny@example.com",
+stance: "goofy",
+},
+{
+name: "Rodney",
+email: "rodney@example.com",
+stance: "goofy",
+},
+{
+name: "Kareem",
+email: "kareem@example.com",
+stance: "mongo",
+},
+{
+name: "Eric",
+email: "bob@example.com",
+stance: "mongo",
+},
+{
+name: "Bam",
+email: "bam@example.com",
+stance: "goofy",
+},
+{
+name: "Nyjah",
+email: "nyjah@example.com",
+stance: "goofy",
+},
+{
+name: "Andrew",
+email: "andrew@example.com",
+stance: "mongo",
+},
+{
+name: "Lizzie",
+email: "lizzie@example.com",
+stance: "goofy",
+},
+{ name: "Leticia", email: "leticia@example.com", stance: "goofy" },
+])
+
+````
+</details>
+
+<details>
+<summary>Columns</summary>
+```tsx
+const columns = [
+  { accessorKey: "name", header: "Name" },
+  { accessorKey: "email", header: "Email" },
+  { accessorKey: "stance", header: "Stance" },
+] satisfies ColumnDef<Data, unknown>[]
+````
+
+</details>

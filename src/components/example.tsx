@@ -8,7 +8,7 @@ import { TableFooterRow } from "./examples/table-footer-row"
 import { TableHeader } from "./examples/table-header"
 import { TableHeaderCell } from "./examples/table-header-cell"
 import { TableHeaderRow } from "./examples/table-header-row"
-import { TablePagination } from "./examples/table-pagination"
+import { TablePaginationBar } from "./examples/table-pagination-bar"
 import { TablePaginationButton } from "./examples/table-pagination-button"
 import { TableTag } from "./examples/table-tag"
 
@@ -24,7 +24,7 @@ interface ExampleProps {
     | "footer"
     | "footerCell"
     | "footerRow"
-    | "pagination"
+    | "paginationBar"
     | "paginationButton"
     | "tableTag"
 }
@@ -50,7 +50,7 @@ export function Example({ renderer }: ExampleProps) {
 
   if (renderer === "footerRow") return <TableFooterRow />
 
-  if (renderer === "pagination") return <TablePagination />
+  if (renderer === "paginationBar") return <TablePaginationBar />
 
   if (renderer === "paginationButton") return <TablePaginationButton />
 

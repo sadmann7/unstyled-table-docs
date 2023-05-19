@@ -8,7 +8,7 @@ description: This component renders the footer cells of the table.
 The footer cell renderer receives the following props:
 
 - `children` - The children of the footer renderer.
-- `footerGroups` - Similar to the array of [header group](/docs/core-apis/header-group) but for the footer.
+- `props` - The props of the footer cell.
 
 ## Preview
 
@@ -21,7 +21,7 @@ The footer cell renderer receives the following props:
   columns={columns}
   data={data}
   renders={{
-    body: ({ children }) => <tbody>{children}</tbody>,
+    footerCell: ({ children, header, props }) => <td {...props}>{children}</td>,
   }}
 />
 ```

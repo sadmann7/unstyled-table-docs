@@ -1,9 +1,8 @@
 "use client"
 
 import * as React from "react"
+import ReactPaginate from "react-paginate"
 import { Table, type ColumnDef } from "unstyled-table"
-
-import { Input } from "../ui/input"
 
 type Data = {
   name: string
@@ -17,7 +16,7 @@ const columns = [
   { accessorKey: "stance", header: "Stance" },
 ] satisfies ColumnDef<Data, unknown>[]
 
-export function TablePagination() {
+export function TablePaginationBar() {
   const [data, setData] = React.useState<Data[]>([
     { name: "Touha", email: "touha@example.com", stance: "mongo" },
     { name: "Sadman", email: "sadman@example.com", stance: "goofy" },
@@ -70,13 +69,25 @@ export function TablePagination() {
       columns={columns}
       data={data}
       renders={{
-        filterInput: ({ props }) => (
-          <Input
-            className="mt-2.5"
-            placeholder={props.placeholder}
-            value={props.value}
-            onChange={props.onChange}
-            {...props}
+        paginationBar: ({
+          tableInstance,
+          btn,
+          firstBtn,
+          gotoPageInput,
+          itemsPerPageOptions,
+          lastBtn,
+          nextBtn,
+          perpageSelect,
+          prevBtn,
+        }) => (
+          <ReactPaginate
+            className="flex items-center gap-2.5"
+            pageCount={tableInstance.getState().pagination.pageSize}
+            pageRangeDisplayed={5}
+            marginPagesDisplayed={2}
+            onPageChange={({ selected }) => {
+              tableInstance.setPageIndex(selected)
+            }}
           />
         ),
       }}

@@ -198,16 +198,6 @@ export const docsConfig: DocsConfig = {
           href: "/docs/renderers/pagination-bar",
           items: [],
         },
-        {
-          title: "Pagination Button",
-          href: "/docs/renderers/pagination-button",
-          items: [],
-        },
-        {
-          title: "Table Tag",
-          href: "/docs/renderers/table-tag",
-          items: [],
-        },
       ],
     },
     {

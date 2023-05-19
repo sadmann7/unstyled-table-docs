@@ -9,8 +9,6 @@ import { TableHeader } from "./examples/table-header"
 import { TableHeaderCell } from "./examples/table-header-cell"
 import { TableHeaderRow } from "./examples/table-header-row"
 import { TablePaginationBar } from "./examples/table-pagination-bar"
-import { TablePaginationButton } from "./examples/table-pagination-button"
-import { TableTag } from "./examples/table-tag"
 
 interface ExampleProps {
   renderer:
@@ -51,10 +49,6 @@ export function Example({ renderer }: ExampleProps) {
   if (renderer === "footerRow") return <TableFooterRow />
 
   if (renderer === "paginationBar") return <TablePaginationBar />
-
-  if (renderer === "paginationButton") return <TablePaginationButton />
-
-  if (renderer === "tableTag") return <TableTag />
 
   return null
 }

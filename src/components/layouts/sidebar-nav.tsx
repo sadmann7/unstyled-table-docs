@@ -43,7 +43,7 @@ export function SidebarNavItems({ items, pathname }: SidebarNavItemsProps) {
             key={index}
             href={item.href}
             className={cn(
-              "group flex w-full items-center rounded-md border border-transparent px-2 py-1 hover:underline",
+              "group flex w-full items-center rounded-md border border-transparent px-2 py-1 hover:bg-muted hover:text-foreground",
               pathname === item.href
                 ? "bg-muted font-medium text-foreground"
                 : "text-muted-foreground",

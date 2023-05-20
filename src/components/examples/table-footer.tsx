@@ -10,9 +10,9 @@ type Data = {
 }
 
 const columns = [
-  { accessorKey: "name", header: "Name" },
-  { accessorKey: "email", header: "Email" },
-  { accessorKey: "stance", header: "Stance" },
+  { accessorKey: "name", header: "Name", footer: "Name" },
+  { accessorKey: "email", header: "Email", footer: "Email" },
+  { accessorKey: "stance", header: "Stance", footer: "Stance" },
 ] satisfies ColumnDef<Data, unknown>[]
 
 export function TableFooter() {
@@ -67,8 +67,12 @@ export function TableFooter() {
     <Table
       columns={columns}
       data={data}
+      // Renders the footer
+      showFooter={true}
       renders={{
-        footer: ({ children, footerGroups }) => <tfoot>{children}</tfoot>,
+        footer: ({ children, footerGroups }) => (
+          <tfoot className="text-left">{children}</tfoot>
+        ),
       }}
     />
   )

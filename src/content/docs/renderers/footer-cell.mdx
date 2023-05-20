@@ -3,6 +3,15 @@ title: footerCell
 description: This component renders the footer cells of the table.
 ---
 
+<Alert>
+  <AlertDescription>
+
+    **Prerequisites**: You need to enable the `showFooter` prop of the table to render the footer.
+    Learn more about [showFooter](/docs/core-apis/table#showfooter).
+
+  </AlertDescription>
+</Alert>
+
 ## Props
 
 The footer cell renderer receives the following props:
@@ -20,6 +29,8 @@ The footer cell renderer receives the following props:
 <Table
   columns={columns}
   data={data}
+  // Renders the footer
+  showFooter={true}
   renders={{
     footerCell: ({ children, header, props }) => <td {...props}>{children}</td>,
   }}

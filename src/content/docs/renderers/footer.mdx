@@ -3,6 +3,15 @@ title: footer
 description: This component renders the footer of the table.
 ---
 
+<Alert>
+  <AlertDescription>
+
+    **Prerequisites**: You need to enable the `showFooter` prop of the table to render the footer.
+    Learn more about [showFooter](/docs/core-apis/table#showfooter).
+
+  </AlertDescription>
+</Alert>
+
 ## Props
 
 The footer renderer receives the following props:
@@ -20,8 +29,12 @@ The footer renderer receives the following props:
 <Table
   columns={columns}
   data={data}
+  // Renders the footer
+  showFooter={true}
   renders={{
-    footer: ({ children, footerGroups }) => <tfoot>{children}</tfoot>,
+    footer: ({ children, footerGroups }) => (
+      <tfoot className="text-left">{children}</tfoot>
+    ),
   }}
 />
 ```
@@ -89,9 +102,9 @@ stance: "goofy",
 <summary>Columns</summary>
 ```tsx
 const columns = [
-  { accessorKey: "name", header: "Name" },
-  { accessorKey: "email", header: "Email" },
-  { accessorKey: "stance", header: "Stance" },
+  { accessorKey: "name", header: "Name", footer: 'Name' },
+  { accessorKey: "email", header: "Email", footer: 'Email' },
+  { accessorKey: "stance", header: "Stance", footer: 'Stance' },
 ] satisfies ColumnDef<Data, unknown>[]
 ````
 

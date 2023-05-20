@@ -10,9 +10,9 @@ type Data = {
 }
 
 const columns = [
-  { accessorKey: "name", header: "Name" },
-  { accessorKey: "email", header: "Email" },
-  { accessorKey: "stance", header: "Stance" },
+  { accessorKey: "name", header: "Name", footer: "Name" },
+  { accessorKey: "email", header: "Email", footer: "Email" },
+  { accessorKey: "stance", header: "Stance", footer: "Stance" },
 ] satisfies ColumnDef<Data, unknown>[]
 
 export function TableFooterCell() {
@@ -67,6 +67,8 @@ export function TableFooterCell() {
     <Table
       columns={columns}
       data={data}
+      // Renders the footer
+      showFooter={true}
       renders={{
         footerCell: ({ children, header, props }) => (
           <td {...props}>{children}</td>

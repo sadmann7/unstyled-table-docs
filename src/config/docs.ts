@@ -209,63 +209,38 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
+          title: "Plain",
+          href: "/docs/examples/plain",
+          items: [],
+        },
+        {
           title: "Column Groups",
           href: "/docs/examples/column-groups",
-          disabled: true,
           items: [],
         },
         {
           title: "Column Visibility",
           href: "/docs/examples/column-visibility",
-          disabled: true,
-          items: [],
-        },
-        {
-          title: "Filters",
-          href: "/docs/examples/filters",
-          disabled: true,
           items: [],
         },
         {
           title: "Server Side Filters",
           href: "/docs/examples/server-side-filters",
-          disabled: true,
-          items: [],
-        },
-        {
-          title: "Pagination",
-          href: "/docs/examples/pagination",
-          disabled: true,
           items: [],
         },
         {
           title: "Server Side Pagination",
           href: "/docs/examples/server-side-pagination",
-          disabled: true,
-          items: [],
-        },
-        {
-          title: "Sorting",
-          href: "/docs/examples/sorting",
-          disabled: true,
           items: [],
         },
         {
           title: "Server Side Sorting",
           href: "/docs/examples/server-side-sorting",
-          disabled: true,
-          items: [],
-        },
-        {
-          title: "Fully Controlled",
-          href: "/docs/examples/fully-controlled",
-          disabled: true,
           items: [],
         },
         {
           title: "Server Controlled",
           href: "/docs/examples/server-controlled",
-          disabled: true,
           items: [],
         },
         {
@@ -307,6 +282,22 @@ export const docsConfig: DocsConfig = {
         {
           title: "Virtualized Infinite Scrolling",
           href: "/docs/examples/virtualized-infinite-scrolling",
+          disabled: true,
+          items: [],
+        },
+      ],
+    },
+    {
+      title: "Styled Tables",
+      items: [
+        {
+          title: "Shadcn",
+          href: "/docs/styled-tables/shadcn-ui",
+          items: [],
+        },
+        {
+          title: "Material",
+          href: "/docs/styled-tables/material-ui",
           disabled: true,
           items: [],
         },

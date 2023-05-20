@@ -1,4 +1,11 @@
+import type { Metadata } from "next"
+
 import { ExampleShell } from "@/components/example-shell"
+
+export const metadata: Metadata = {
+  title: "Column Groups Example",
+  description: "A table example with column groups.",
+}
 
 export default function ColumnGroupsPage() {
   return (

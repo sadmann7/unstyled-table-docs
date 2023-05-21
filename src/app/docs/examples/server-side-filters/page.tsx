@@ -11,7 +11,7 @@ export default function ServerSideFilters() {
   return (
     <ExampleShell
       name="Server Side Filters"
-      src="https://codesandbox.io/p/sandbox/server-side-filters-lxq6us?embed=1"
+      src="https://codesandbox.io/p/sandbox/server-side-filters-wy4g1y?file=%2Fsrc%2Fmain.tsx%3A1%2C1&embed=1"
     />
   )
 }

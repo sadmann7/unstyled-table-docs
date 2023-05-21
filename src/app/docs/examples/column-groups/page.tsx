@@ -11,7 +11,7 @@ export default function ColumnGroupsPage() {
   return (
     <ExampleShell
       name="Column Groups"
-      src="https://codesandbox.io/p/sandbox/column-groups-b769ys?file=%2Fapp%2Fpage.tsx%3A53%2C10&embed=1"
+      src="https://codesandbox.io/p/sandbox/column-groups-hv0k7s?file=%2Fsrc%2Fmain.tsx%3A58%2C1&embed=1"
     />
   )
 }

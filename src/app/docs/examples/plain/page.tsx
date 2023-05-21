@@ -12,7 +12,7 @@ export default function PlainPage() {
   return (
     <ExampleShell
       name="Plain"
-      src="https://codesandbox.io/p/sandbox/column-visibility-oy2gy4?embed=1"
+      src="https://codesandbox.io/p/sandbox/plain-980r9o?file=%2Fsrc%2Fmain.tsx%3A7%2C1&embed=1"
     />
   )
 }

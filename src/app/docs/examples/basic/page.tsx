@@ -11,7 +11,7 @@ export default function BasicPage() {
   return (
     <ExampleShell
       name="Basic"
-      src="https://codesandbox.io/p/sandbox/basic-table-hnk64q?embed=1"
+      src="https://codesandbox.io/p/sandbox/basic-ljxo94?file=%2Fsrc%2Fmain.tsx%3A26%2C1&embed=1"
     />
   )
 }

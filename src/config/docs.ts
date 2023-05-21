@@ -239,11 +239,6 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
-          title: "Server Controlled",
-          href: "/docs/examples/server-controlled",
-          items: [],
-        },
-        {
           title: "Row Selection",
           href: "/docs/examples/row-selection",
           disabled: true,

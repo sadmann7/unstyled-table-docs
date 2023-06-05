@@ -293,7 +293,6 @@ export const docsConfig: DocsConfig = {
         {
           title: "Material",
           href: "/docs/styled-tables/material-ui",
-          disabled: true,
           items: [],
         },
       ],
